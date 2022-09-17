@@ -1,0 +1,39 @@
+###### Rest Service ######
+server.port = 8074
+
+###### Monitoring range ######
+current.range = POLAND
+current.type = BOEING_747
+
+###### OpenSky Monitoring ranges ######
+search.range.all = https://opensky-network.org/api/states/all #ALL
+search.range.poland = https://opensky-network.org/api/states/all?lamin=49.0273&lomin=14.0745&lamax=54.8515&lomax=24.0299 #POLAND
+search.range.china = https://opensky-network.org/api/states/all?lamin=18.1977&lomin=73.6753&lamax=53.4588&lomax=135.0263 #CHINA
+search.range.warsaw = https://opensky-network.org/api/states/all?lamin=51.8747&lomin=20.3796&lamax=52.5997&lomax=21.5936 #WARSAW
+
+###### API access ######
+aeroapi.key =
+aerodatabox.key =
+
+###### Credentials ######
+pass.admin =
+
+###### H2 DataBase ######
+spring.datasource.url=jdbc:h2:file:./data/flights_v2_0305;AUTO_SERVER=TRUE
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.defer-datasource-initialization=true
+spring.jpa.open-in-view=true
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#Enabling h2 Console
+spring.h2.console.enabled=true
+#spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+###### Logs ######
+logging.config=file:src/main/resources/log/logback.xml
+#server.tomcat.accesslog.enabled=true
+#server.tomcat.basedir=src/main/resources/log/tomcat
+#server.tomcat.accesslog.directory=logger
